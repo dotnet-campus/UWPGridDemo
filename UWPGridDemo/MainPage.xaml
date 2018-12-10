@@ -9,6 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="71*" />
+        </Grid.ColumnDefinitions>
+        <ListView Margin="10,10,10,10" Width="200" ItemsSource="{x:Bind ScenarioPageList}" IsItemClickEnabled="True"
+                  ItemClick="ListView_OnItemClick">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:ScenarioPage">
+                    <TextBlock Margin="60,10,10,10" Text="{x:Bind Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Frame x:Name="Frame" Grid.Column="1"></Frame>
 
     </Grid>
 </Page>

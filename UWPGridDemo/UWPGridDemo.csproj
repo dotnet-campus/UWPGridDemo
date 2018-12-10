@@ -123,6 +123,21 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenario1.xaml.cs">
+      <DependentUpon>Scenario1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenario2.xaml.cs">
+      <DependentUpon>Scenario2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenario3.xaml.cs">
+      <DependentUpon>Scenario3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenario4.xaml.cs">
+      <DependentUpon>Scenario4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenario5.xaml.cs">
+      <DependentUpon>Scenario5.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -146,6 +161,26 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Scenario1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Scenario2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Scenario3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Scenario4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Scenario5.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

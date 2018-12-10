@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="UWPGridDemo.Scenario4"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPGridDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Border Width="159" Grid.ColumnSpan="3" HorizontalAlignment="Center" Background="PaleGreen" />
+            <Border Width="28" HorizontalAlignment="Left" Background="#7FFF6347" />
+            <Border Width="51" Grid.Column="1" HorizontalAlignment="Center" Background="#7FC71585" />
+            <Border Width="28" Grid.Column="2" HorizontalAlignment="Right" Background="#7F008080" />
+        </Grid>
+    </Grid>
+</Page>

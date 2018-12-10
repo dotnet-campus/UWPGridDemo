@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -26,5 +27,39 @@ namespace UWPGridDemo
         {
             this.InitializeComponent();
         }
+
+        public ObservableCollection<ScenarioPage> ScenarioPageList { get; } = new ObservableCollection<ScenarioPage>()
+        {
+            new ScenarioPage(typeof(Scenario1)),
+            new ScenarioPage(typeof(Scenario2)),
+            new ScenarioPage(typeof(Scenario3)),
+            new ScenarioPage(typeof(Scenario4)),
+            new ScenarioPage(typeof(Scenario5)),
+        };
+
+        private void ListView_OnItemClick(object sender, ItemClickEventArgs e)
+        {
+            Frame.Navigate(((ScenarioPage) e.ClickedItem).Page);
+        }
+    }
+
+    public class ScenarioPage
+    {
+        /// <inheritdoc />
+        public ScenarioPage(string name, Type page)
+        {
+            Name = name;
+            Page = page;
+        }
+
+        /// <inheritdoc />
+        public ScenarioPage(Type page)
+        {
+            Page = page;
+            Name = page.Name;
+        }
+
+        public string Name { get;  }
+        public Type Page { get; }
     }
 }
