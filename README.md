@@ -1,4 +1,4 @@
-﻿# Defined the undefined behaviors
+﻿# Define the undefined behaviors
 
 XAML's Grid is the most widely used Panel and is very versatile. However, there are some undefined behaviors.
 
